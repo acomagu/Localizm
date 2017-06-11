@@ -1,0 +1,25 @@
+{
+  "name": "apollo-pr-linebot",
+  "description": "LINE Bot service for 株式会社アポロガス(http://www.apollogas.co.jp/).",
+  "repository": "https://bitbucket.org/eyesjapan/apollo-pr-linebot",
+  "keywords": ["go", "apollo", "line", "linebot", "bot"],
+  "env": {
+    "LINE_CHANNEL_SECRET": {
+      "description": "Channel Secret string for LINE Messaging API",
+      "generator": "secret"
+    },
+    "LINE_CHANNEL_ACCESS_TOKEN": {
+      "description": "Access Token for LINE Messaging API",
+      "generator": "secret"
+    },
+    "GOOGLE_APPLICATION_CREDENTIALS_JSON": {
+      "description": "The raw string of Google Application Default Credentials JSON",
+      "generator": "secret"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/go"
+    }
+  ]
+}
